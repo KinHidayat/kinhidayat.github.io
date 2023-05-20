@@ -1,0 +1,115 @@
+<style>
+ol.Nourut{
+    list-style-type: none;    
+}
+
+ol.nourut> li{
+    list-style: none;
+    counter-increment: nourutpertama;
+}
+
+ol.nourut> li:before{
+    font-weight: bold;
+    content:counter(nourutpertama) ".";
+}
+/*didalam kurung setelah nth-child bisa diisi (odd) jika ingin hanya angka genap yang tampil atau diisi (even)jika ingin hanya angka ganjil yang tampil*/
+
+ol.nourut>:nth-child()
+{
+  visibility: hidden;
+  position: absolute;
+}
+
+
+ol.nourut> li > ol{
+    list-style-type: none; 
+}
+
+ol.nourut> li > ol > li
+{
+    list-style: none;
+    counter-increment: nourutkedua;
+}
+
+ol.nourut> li > ol > li:before{
+    font-weight: bold;
+    content:counter(nourutpertama) "." counter(nourutkedua,lower-alpha) " ";
+}
+
+  </style>
+  <ol class="Nourut">
+      <li>
+          Absensi Kelas 1
+          <ol>
+              <li></li>              
+                  <ul type="circle">
+                  <li>Asep</li>
+                  <li>Lukas</li>
+                  <li>Ucok</li>
+                  </ul>
+          
+              <li></li>
+              <ul type="disc">
+                <li>Lisa</li>
+                <li>Ayunda</li>
+                <li>Luna</li>
+                </ul>
+              <li></li>
+              <ul type="square">
+                <li>Ayu</li>
+                <li>Lina</li>
+                <li>Isna</li>
+                </ul>
+          </ol>
+      </li>
+      <li>
+        Absensi Kelas 2
+         <ol>
+          <li></li>
+          <ul type="disc">
+            <li>David</li>
+            <li>Bayu</li>
+            <li>Mario</li>
+            </ul>
+          <li></li>
+          <ul type="Square">
+            <li>Jamal</li>
+            <li>Komang</li>
+            <li>Made</li>
+            </ul>
+          
+          <li></li>
+          <ul type="circle">
+            <li>Bagus</li>
+            <li>Bagas</li>
+            <li>Marcel</li>
+            </ul>
+         </ol>
+      </li>
+      <li>
+        Absensi Kelas 3
+         <ol>
+          <li></li>
+            <ul type="disc">
+             <li>Ryan</li>
+             <li>Joe</li>
+             <li>Kamil</li>
+            </ul>
+
+          <li></li>
+            <ul type="circle">
+             <li>Bagus</li>
+             <li>Bagas</li>
+             <li>Marcel</li>
+            </ul>
+          <li></li>
+           <ul type="Square">
+            <li>Salim</li>
+            <li>Ahmad</li>
+            <li>Kenan</li>
+           </ul>
+          
+
+         </ol>
+      </li>
+           
